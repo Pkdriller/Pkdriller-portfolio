@@ -1,22 +1,30 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['index.html'],
+  content: ["./index.html", "./other-projects.html"],
+  darkMode: "class",
   theme: {
-    container: {
-      center: true,
-      padding: '9px',
-    },
     extend: {
+      content: {
+        sun: 'url("./dist/images/icons/sun.svg")',
+        moon: 'url("./dist/images/icons/moon.svg")',
+      },
       colors: {
-        primary: '#994ff3',
-        dark: '#0f172a',
-        secondary: '#64748b',
+        primary: "#E4F15F",
+        secondary: "#9354FF",
+        dark: "#0d0d0d",
+        darkSec: "#2d2d2d",
+        primaryOld: "#becf15",
       },
       screens: {
-        '2xl': '1320px',
-      }
+        xl: "1080px",
+      },
+      fontFamily: {
+        poppins: "poppins",
+        acornthin: "acornthin",
+        acornsemi: "acornsemi",
+        acornbold: "acornbold",
+      },
     },
   },
-  plugins: [],
-}
-
+  plugins: [require("tailwind-scrollbar")({ nocompatible: true })],
+};
