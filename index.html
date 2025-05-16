@@ -1,185 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <p id"currentTime"></p>
-    <style>
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        .background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; }
-        .bubbles { position: relative; display: flex; }
-        .bubbles span {
-            position: relative;
-            width: 30px;
-            height: 30px;
-            background: #4fc3dc;
-            margin: 0 4px;
-            border-radius: 50%;
-            box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
-            animation: animate 15s linear infinite;
-            animation-duration: calc(125s / var(--i));
-        }
-        .bubbles span:nth-child(even) {
-            background: #ff2d75;
-            box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
-        }
-        @keyframes animate {
-            0% { transform: translateY(100vh) scale(0); }
-            100% { transform: translateY(-10vh) scale(1); }
-        }
-        body { color: white; background: linear-gradient(135deg, #1a1a2e, #16213e); min-height: 100vh; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; backdrop-filter: blur(5px); }
-        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; margin-bottom: 60px; }
-        .logo { font-size: 28px; font-weight: 700; color: white; text-decoration: none; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 30px; }
-        nav ul li a { color: white; text-decoration: none; font-weight: 500; transition: 0.3s; }
-        nav ul li a:hover { color: #4fc3dc; }
-        .hero { display: flex; align-items: center; justify-content: space-between; margin-bottom: 100px; }
-        .hero-text h1 { font-size: 48px; margin-bottom: 20px; }
-        .hero-text h1 span { color: #4fc3dc; }
-        .hero-text p { font-size: 18px; margin-bottom: 30px; line-height: 1.6; max-width: 600px; opacity: 0.9; }
-        .btn { display: inline-block; padding: 12px 30px; background: #4fc3dc; color: #16213e; border-radius: 30px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-        .btn:hover { background: #ff2d75; color: white; transform: translateY(-3px); }
-        .hero-image img { width: 350px; border-radius: 50%; border: 5px solid #4fc3dc; box-shadow: 0 0 30px #4fc3dc; }
-        section { margin-bottom: 100px; }
-        .section-title { font-size: 36px; margin-bottom: 50px; text-align: center; }
-        .section-title span { color: #4fc3dc; }
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .project-card { background: rgba(255, 255, 255, 0.1); border-radius: 15px; overflow: hidden; transition: 0.3s; }
-        .project-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); }
-        .project-img { height: 200px; overflow: hidden; }
-        .project-img img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .project-card:hover .project-img img { transform: scale(1.1); }
-        .project-info { padding: 20px; }
-        .project-info h3 { font-size: 22px; margin-bottom: 10px; }
-        .project-info p { margin-bottom: 15px; opacity: 0.8; }
-        .skills { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; }
-        .skill { background: rgba(255, 255, 255, 0.1); padding: 15px 25px; border-radius: 30px; display: flex; align-items: center; transition: 0.3s; }
-        .skill:hover { background: #4fc3dc; color: #16213e; transform: scale(1.1); }
-        .skill i { font-size: 24px; margin-right: 10px; }
-        footer { text-align: center; padding: 30px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); }
-        .social-links { display: flex; justify-content: center; margin-bottom: 20px; }
-        .social-links a { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; margin: 0 10px; color: white; text-decoration: none; transition: 0.3s; }
-        .social-links a:hover { background: #4fc3dc; transform: translateY(-5px); }
-        @media (max-width: 768px) {
-            .hero { flex-direction: column; text-align: center; }
-            .hero-text { margin-bottom: 40px; }
-            nav ul { display: none; }
-        }
-    </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D03AQF0UFDz7IzJGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714796811849?e=1747872000&v=beta&t=AvJ2Z0UFeMt8WfWR9TiT8TLOzrmvumkzglfGnU6ktJY" type="image/x-icon">
+    <title>Shivraj Anand | Portfolio</title>
+    <meta name="description"
+        content="Explore the portfolio of Shivraj Anand: a versatile Python developer, data analyst, and researcher with expertise in AI, web development, and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MEXW2XNBM"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-3MEXW2XNBM');
+</script>
+
 <body>
-    <div class="background">
-        <div class="bubbles">
-            <span style="--i:11;"></span><span style="--i:12;"></span><span style="--i:24;"></span>
-            <span style="--i:10;"></span><span style="--i:14;"></span><span style="--i:23;"></span>
-            <span style="--i:18;"></span><span style="--i:16;"></span><span style="--i:19;"></span>
-            <span style="--i:20;"></span><span style="--i:22;"></span><span style="--i:25;"></span>
-            <span style="--i:18;"></span><span style="--i:21;"></span><span style="--i:15;"></span>
-            <span style="--i:13;"></span><span style="--i:26;"></span><span style="--i:17;"></span>
-            <span style="--i:13;"></span><span style="--i:28;"></span>
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+    <button class="hamburger" onclick="toggleSidebar()"><strong>MENU</strong></button>
+    <nav>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="pages/projects.html">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="/pages/blog.html">Blogs</a>
+            <a href="/pages/certificates.html">Certificates</a>
+            <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> Resume
+            </a>
         </div>
+    </nav>
+
+    <div class="sidebar" id="sidebar">
+        <!-- <a id="closebutton" href="javascript:void(0)" onclick="toggleSidebar()"><strong>✖ Close</strong></a> -->
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="pages/projects.html">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="/pages/blog.html">Blogs</a>
+        <a href="/pages/certificates.html">Certificates</a>
+        <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn">
+            <i class="fas fa-download"></i> Resume
+        </a>
     </div>
 
-    <div class="container">
-        <header>
-            <a href="#" class="logo">MINE PORTFOLIO</a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <img src="https://media.licdn.com/dms/image/v2/D4D03AQF0UFDz7IzJGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714796811849?e=1747872000&v=beta&t=AvJ2Z0UFeMt8WfWR9TiT8TLOzrmvumkzglfGnU6ktJY" alt="Shivraj Anand" class="profile-img" />
+        <h1>Shivraj Anand</h1>
+        <p class="intro">Data Scientist in the Making</p>
+        <p class="subtagline">Exploring the space where human cognition meets artificial intelligence.</p>
+    </header>
 
-        <section id="home">
-            <div class="hero">
-                <div class="hero-text">
-                    <h1>HI, I'M <span>BENARD WACHIRA MY REAL NAME</span></h1>
-                    <p>Hi am pkdriller by nickname, an IT student and full-stack developer from Kenya with a passion for crafting clean, efficient code and diving into cutting-edge technologies. I specialize in JavaScript and am mastering React, Node.js, and TypeScript. My flagship project, NEXUS-XMD, is a feature-rich WhatsApp bot that showcases my skills in automation and API integration. I thrive on collaborating on JavaScript My goal is to build innovative solutions that blend creativity with a Kenyan vibe! 🌍💻
-Skills.</p>
-                    <a href="#projects" class="btn">View My Work</a>
-                </div>
-                <div class="hero-image">
-                    <img src="https://i.ibb.co/HTfGVM8x/nexus-xmd.jpg" alt="Profile Image">
+    <main class="main-content">
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <div class="card">
+                <p style="text-align: justify;">I'm <strong>Shivraj Anand</strong>, an undergraduate in Computer Science
+                    at B.P. Mandal College of Engineering, graduating in June 2025. I love data science, particularly
+                    the similarity between artificial intelligence and the human brain. I like data cleaning,
+                    statistical modeling, and developing models that convert raw data into insights. Presently, I'm
+                    developing proficiency in Data Science & Machine Learning, along with web development. My area of
+                    research is <strong>Natural Language Processing</strong> With a questionably inclined mind honed
+                    through poetry and reading, I envision myself as an eternal learner, ever searching at the
+                    crossroads of humans and machines.</p>
+                <div class="call-to-action">
+                    <div id="button">
+                        <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn"><i
+                                class="fas fa-download"></i> Resume</a>
+                    </div>
+                    <div id="button">
+                        <a href="#contact">Connect with me </a>
+                    </div>
                 </div>
             </div>
+        </section>
+        <section id="skills">
+            <h2 class="section-title">Skills</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>C</li>
+                        <li>C++</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>ML/Data Analysis</h3>
+                    <ul class="skill-list">
+                        <li>NumPy</li>
+                        <li>Pandas</li>
+                        <li>PyTorch</li>
+                        <li>Scikit-Learn</li>
+                        <li>Excel</li>
+                        <li>Streamlit</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Web Dev</h3>
+                    <ul class="skill-list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bootstrap</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Database</h3>
+                    <ul class="skill-list">
+                        <li>SQL</li>
+                        <li>DBMS</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Tools</h3>
+                    <ul class="skill-list">
+                        <li>Git</li>
+                        <li>GitHub</li>
+                        <li>Power BI</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Soft Skills</h3>
+                    <ul class="skill-list">
+                        <li>English</li>
+                        <li>Hindi</li>
+                        <li>Communication</li>
+                        <li>Content Writing</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Natural Language Processing</h3>
+                    <ul class="skill-list">
+                        <li>spaCy</li>
+                        <li>Transformers</li>
+                        <li>re</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card" id="tech-logo-row">
+                <div class="tech-logo-row">
+                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
+                        alt="Python" title="Python">
+                    <img src="https://cdn.simpleicons.org/c/00599C" alt="C" title="C">
+                    <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" title="C++">
+                    <img src="https://numpy.org/images/logo.svg" alt="NumPy" title="NumPy">
+                    <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" title="Pandas">
+                    <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch">
+                    <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-Learn"
+                        title="Scikit-Learn">
+                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML" title="HTML">
+                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS" title="CSS">
+                    <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript">
+                    <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" title="Bootstrap">
+                    <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" title="SQL">
+                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" title="Git">
+                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" title="GitHub">
+                    <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/excel_32x1.svg"
+                        alt="Excel" title="Excel">
+                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_BPI_icon1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=96&hei=96&qlt=100&fmt=png-alpha&fit=constrain"
+                        alt="Power BI" title="Power BI">
+                    <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva"
+                        title="Canva">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg" alt="spaCy"
+                        title="spaCy">
+                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Transformers"
+                        title="Transformers (Hugging Face)">
+                    <img src="https://docs.streamlit.io/logo.svg" alt="Streamlit" title="Streamlit">
+                </div>
+            </div>
+
+
         </section>
 
         <section id="projects">
-            <h2 class="section-title">MY <span>PROJECT</span></h2>
-            <div class="projects">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="https://i.ibb.co/20QmgPks/nexus-xmd.jpg" alt="PROJECT 1">
+            <h2 class="section-title">Projects</h2>
+            <div class="card">
+                <p>Explore my work in AI, ML, data science, web apps, research. Visit the Projects and Blog page for
+                    details.</p>
+                <div class="scroll-container-wrapper">
+                    <div id="projects-container" class="scroll-container">
+                        <!-- Project tiles will be injected here -->
                     </div>
-                    <div class="project-info">
-                        <h3>VISIT PROJECTS WEBSITE</h3>
-                        <p></p>
-                        
-    <a href="https://github.com/Pkdriller/NEXUS-AI" class="button" target="_blank"> <span>NEXUS-AI</span> </a> <br>
-    <a href="https://github.com/Pkdriller/NEXUS-XMD" class="button" target="_blank"> <span>NEXUS-XMD</span> </a> <br>
-    <a href="https://pk-all-in-one-downloader.vercel.app" class="button" target="_blank"> <span>ALL-MEDIA-DOWNLOADER</span> </a> <br>
-    <a href="https://nexus-insta-reels.vercel.app/" class="button" target="_blank"> <span>IG-REELS-DOWNLOADER</span> </a> <br>
-    <a href="https://image-editor-coral.vercel.app/" class="button" target="_blank"> <span>IMAGE-EDITOR</span> </a> <br>
-    <a href="https://pk-movies.vercel.app/" class="button" target="_blank"> <span>MOVIE-SEARCH</span> </a> <br>
-    <a href="https://nexus-movie-app.vercel.app/" class="button" target="_blank"> <span>MOVIE-SITE</span> </a> <br>
-    <a href="https://apk-downloader-chi.vercel.app/" class="button" target="_blank"> <span>APK-DOWNLOADER</span> </a> <br>
-    <a href="https://mr-pk-web.vercel.app/" class="button" target="_blank"> <span>WEB-1</span> </a> <br>
-    <a href="https://pk-obfuscator.vercel.app/" class="button" target="_blank"> <span>ENYCRYPTOR</span> </a> <br>
-    <p>REPORT ERROR</p>
+                </div>
+                <div id="button"><a href="pages/projects.html">View Projects →</a></div><br>
+                <div id="button"><a href="pages/blog.html">View Blogs →</a></div>
+            </div>
 
-    <a href="https://wa.me/++254794146821?text=HEY_SIR_HAVE_SOMETHING_TO_DISCUSS_WITH_YOU" class="button" target="_blank"> <span>CONTACT-ME</span> </a> <br>
-      
-    <div id="music-player">
-      <audio controls autoplay loop>
-          <source src="https://files.catbox.moe/93z21l.mp3" type="audio/mpeg">
-          Your browser does not support the audio element.
-      </audio>
-  </div>
-        
+        </section>
 
-    
+        <section id="contact">
+            <h2 class="section-title">Work With Me</h2>
+            <p class="section-subtitle"><strong>Let’s connect—projects, research, or opportunities, I’m all
+                    ears.</strong></p>
 
-   
-  
-</body>
-                        
+            <div class="contact-wrapper">
+                <!-- Left Card: Contact Info -->
+                <div class="card contact-info">
+                    <h3>Get In Touch</h3>
+                    <p><strong>Email:</strong> <a
+                            href="mailto:shivrajanand022002@gmail.com">shivrajanand022002@gmail.com</a></p>
+                    <p><strong>Phone:</strong> +91 8092776242</p>
+                    <p><strong>Location:</strong> India</p>
+
+                    <h4>Connect With Me</h4>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/shivrajanand" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.github.com/shivrajanand" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://x.com/shivrajanand_ai" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/shivrajanandai/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="https://www.kaggle.com/shivrajanandai" target="_blank"><i
+                                class="fab fa-kaggle"></i></a>
                     </div>
+
+                    <div style="margin-top: 10px;">
+                        <p style="text-align: justify;">I'm interested in <strong>freelance assignments</strong>
+                            (<em>on-call</em>), <strong>compensated part-time remote internships</strong>, and
+                            <strong>collaborative research projects</strong>. Although I <em>prefer remote
+                                assignments</em>, I'd be willing to <u>relocate</u> for the proper <strong>full-time
+                                opportunity</strong> or <strong>significant project</strong>.</p>
+                    </div>
+                </div>
+
+                <!-- Right Card: Contact Form -->
+                <div class="card contact-form">
+                    <h3>Send Me a Message</h3>
+                    <form action="https://formspree.io/f/xzzeplak" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <input type="text" name="subject" placeholder="What do you wanna talk about?" required>
+                        <textarea name="message" placeholder="Message" rows="10" required></textarea>
+                        <button type="submit">Send Message →</button>
+                    </form>
                 </div>
             </div>
         </section>
 
-        <section id="skills">
-            <h2 class="section-title">My <span>Skills</span></h2>
-            <div class="skills">
-                <div class="skill"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                <div class="skill"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                <div class="skill"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                <div class="skill"><i class="fab fa-react"></i><span>React</span></div>
-                <div class="skill"><i class="fab fa-node-js"></i><span>Node.js</span></div>
-                <div class="skill"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                <div class="skill"><i class="fab fa-sass"></i><span>SASS</span></div>
-                <div class="skill"><i class="fas fa-database"></i><span>MongoDB</span></div>
-            </div>
-        </section>
+    </main>
 
-        <footer>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <p>&copy; .HI AM  PKDRILLER THANKS FOR VISITING 2025 ALL RIGHT RESERVED 🇰🇪💙.<span id="currentYear"></span  .</p>
-        </footer>
-    </div>
+    <div style="position: fixed; bottom: 30px; right: 5px;">
+        <div id="button"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
+          style="
+            width: 50px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+          ">
+          <i class="fas fa-arrow-up"></i>
+        </div>
+      </div>
+      
+
+
+    <footer>
+
+        <p>
+            © 2025 Shivraj Anand | All rights reserved.
+        </p>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
 </body>
-                                                                </html>
+
+    </html>
