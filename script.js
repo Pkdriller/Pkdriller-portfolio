@@ -15,7 +15,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const combinedMessage = `Email: ${email}%0AMessage: ${message}`;
 
     // WhatsApp API URL with the combined message
-    const whatsappUrl = `https://wa.me/254700143167?text=${combinedMessage}`;
+    const whatsappUrl = `https://wa.me/254794146821?text=${combinedMessage}`;
 
     // Redirect to WhatsApp with the message
     window.open(whatsappUrl, '_blank');
