@@ -1,293 +1,305 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en" class="mdui-theme-dark">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D03AQF0UFDz7IzJGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714796811849?e=1747872000&v=beta&t=AvJ2Z0UFeMt8WfWR9TiT8TLOzrmvumkzglfGnU6ktJY" type="image/x-icon">
-    <title>Shivraj Anand | Portfolio</title>
-    <meta name="description"
-        content="Explore the portfolio of Shivraj Anand: a versatile Python developer, data analyst, and researcher with expertise in AI, web development, and more.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet" href="assets/css/index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SyntaxSpin</title>
+  <!-- Filled -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Outlined -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<!-- Rounded -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+<!-- Sharp -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
+<!-- Two Tone -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/mdui@2/mdui.css">
+<script src="https://unpkg.com/mdui@2/mdui.global.js"></script>
+  <style>
+    :root{
+  --mdui-color-primary: 231 182 241;
+  --mdui-color-surface-tint: 231 182 241;
+  --mdui-color-on-primary: 70 33 81;
+  --mdui-color-primary-container: 94 56 105;
+  --mdui-color-on-primary-container: 251 215 255;
+  --mdui-color-secondary: 213 192 214;
+  --mdui-color-on-secondary: 58 43 61;
+  --mdui-color-secondary-container: 81 65 84;
+  --mdui-color-on-secondary-container: 242 219 243;
+  --mdui-color-tertiary: 245 183 178;
+  --mdui-color-on-tertiary: 76 37 34;
+  --mdui-color-tertiary-container: 102 59 55;
+  --mdui-color-on-tertiary-container: 255 218 215;
+  --mdui-color-error: 255 180 171;
+  --mdui-color-on-error: 105 0 5;
+  --mdui-color-error-container: 147 0 10;
+  --mdui-color-on-error-container: 255 218 214;
+  --mdui-color-background: 22 18 23;
+  --mdui-color-on-background: 234 224 231;
+  --mdui-color-surface: 22 18 23;
+  --mdui-color-on-surface: 234 224 231;
+  --mdui-color-surface-variant: 76 68 76;
+  --mdui-color-on-surface-variant: 207 195 205;
+  --mdui-color-outline: 152 142 151;
+  --mdui-color-outline-variant: 76 68 76;
+  --mdui-color-shadow: 0 0 0;
+  --mdui-color-scrim: 0 0 0;
+  --mdui-color-inverse-surface: 234 224 231;
+  --mdui-color-inverse-on-surface: 52 47 52;
+  --mdui-color-inverse-primary: 120 79 131;
+  --mdui-color-primary-fixed: 251 215 255;
+  --mdui-color-on-primary-fixed: 47 10 59;
+  --mdui-color-primary-fixed-dim: 231 182 241;
+  --mdui-color-on-primary-fixed-variant: 94 56 105;
+  --mdui-color-secondary-fixed: 242 219 243;
+  --mdui-color-on-secondary-fixed: 36 23 39;
+  --mdui-color-secondary-fixed-dim: 213 192 214;
+  --mdui-color-on-secondary-fixed-variant: 81 65 84;
+  --mdui-color-tertiary-fixed: 255 218 215;
+  --mdui-color-on-tertiary-fixed: 51 17 15;
+  --mdui-color-tertiary-fixed-dim: 245 183 178;
+  --mdui-color-on-tertiary-fixed-variant: 102 59 55;
+  --mdui-color-surface-dim: 22 18 23;
+  --mdui-color-surface-bright: 61 55 61;
+  --mdui-color-surface-container-lowest: 17 13 18;
+  --mdui-color-surface-container-low: 31 26 31;
+  --mdui-color-surface-container: 35 30 35;
+  --mdui-color-surface-container-high: 46 40 46;
+  --mdui-color-surface-container-highest: 57 51 57;
+    }
+    body {
+      font-family: 'Outfit', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    .containers{
+      
+      border-top: 1px solid #E0E0E0;
+      padding: 22px;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding: 16px;
+    }
+
+    .profile {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      transition: transform 0.3s ease;
+    }
+
+    .profile:hover {
+      transform: translateY(-4px);
+    }
+
+    .profile img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 3px solid rgb(var(--mdui-color-on-surface));
+      transition: border-color 0.3s ease;
+    }
+
+    .profile img:hover {
+      border-color: rgb(var(--mdui-color-primary));
+    }
+
+    .profile h3 {
+      font-size: 1.5rem;
+      
+      margin: 0;
+    }
+
+    .profile p {
+      margin: 4px 0 0;
+      
+      color: gainsboro;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      
+      margin-bottom: 16px;
+    }
+
+    .skills, .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+
+    .skill, .language {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: #F3E5F5;
+      border-radius: 50px;
+      transition: background-color 0.3s ease;
+    }
+
+    .skill:hover, .language:hover {
+      background: #E1BEE7;
+    }
+
+    .skill span, .language span {
+      font-size: 1rem;
+      
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .projects {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .project {
+      padding: 16px;
+      border: 1px solid #E0E0E0;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .project:hover {
+      border-color: rgb(var(--mdui-color-on-primary-container));
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .project h5 {
+      margin: 0 0 8px;
+      font-size: 1.125rem;
+      font-weight: 500;
+     
+    }
+
+    .project p {
+      margin: 0;
+      font-size: 0.875rem;
+  
+    }
+
+    
+    .copyright {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.875rem;
+      
+    }
+  </style>
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3MEXW2XNBM"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-3MEXW2XNBM');
-</script>
-
+<header>
+	<mdui-top-app-bar style="position: relative; margin-left:9px; margin-right:9px;" >
+  <div style="text-align : center;">
+  <mdui-top-app-bar-title>SyntaxSpin</mdui-top-app-bar-title></div>
+  <div style="flex-grow: 1"></div>
+  <mdui-dropdown>
+  <mdui-button-icon icon="person" slot="trigger"></mdui-button-icon>
+   <mdui-menu>
+    <mdui-menu-item onClick='window.open("https://github.com/syntaxspin/","_blank");'>Github</mdui-menu-item>
+    <mdui-menu-item onClick='window.open("https://instagram.com/syntaxspin","_blank");'>Instagram</mdui-menu-item>
+	  <mdui-menu-item onClick='window.open("https://bsky.app/profile/syntaxspin.bsky.social","_blank");'>Bluesky</mdui-menu-item>
+	   <mdui-menu-item onClick='window.open("https://reddit.com/u/syntaxspin","_blank");'>Reddit</mdui-menu-item>
+  </mdui-menu>
+</mdui-dropdown>
+</mdui-top-app-bar>
+</header>
 <body>
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    <button class="hamburger" onclick="toggleSidebar()"><strong>MENU</strong></button>
-    <nav>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="pages/projects.html">Projects</a>
-            <a href="#contact">Contact</a>
-            <a href="/pages/blog.html">Blogs</a>
-            <a href="/pages/certificates.html">Certificates</a>
-            <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn">
-                <i class="fas fa-download"></i> Resume
-            </a>
-        </div>
-    </nav>
+  <div class="containers">
+  <div class="container">
+    <!-- Developer Profile -->
+    <mdui-card variant="outlined" style=" border: 1px solid; border-radius:40px; padding: 20px;"class="profile">
+      <img src="https://github.com/syntaxspin.png" alt="Developer">
+      <div>
+        <h3>SyntaxSpin</h3>
+        <p>Developer & Designer</p>
+      </div>
+    </mdui-card>
 
-    <div class="sidebar" id="sidebar">
-        <!-- <a id="closebutton" href="javascript:void(0)" onclick="toggleSidebar()"><strong>✖ Close</strong></a> -->
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="pages/projects.html">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="/pages/blog.html">Blogs</a>
-        <a href="/pages/certificates.html">Certificates</a>
-        <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn">
-            <i class="fas fa-download"></i> Resume
-        </a>
+    <!-- Skills Section -->
+    <div>
+      <h4 class="section-title">Skills</h4>
+      <div class="skills">
+        <mdui-chip outlined >Java</mdui-chip>
+	   	<mdui-chip outlined >Kotlin</mdui-chip>
+		   <mdui-chip outlined >CSS3</mdui-chip>
+		   <mdui-chip outlined >HTML5</mdui-chip>
+		 <mdui-chip outlined >JavaScript</mdui-chip>
+		 <mdui-chip outlined >Markdown</mdui-chip>
+		 <mdui-chip outlined >Git</mdui-chip>
+		 <mdui-chip outlined >Batch</mdui-chip>
+       
+      </div>
     </div>
 
-    <header>
-        <img src="https://media.licdn.com/dms/image/v2/D4D03AQF0UFDz7IzJGg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1714796811849?e=1747872000&v=beta&t=AvJ2Z0UFeMt8WfWR9TiT8TLOzrmvumkzglfGnU6ktJY" alt="Shivraj Anand" class="profile-img" />
-        <h1>Shivraj Anand</h1>
-        <p class="intro">Data Scientist in the Making</p>
-        <p class="subtagline">Exploring the space where human cognition meets artificial intelligence.</p>
-    </header>
+    <!-- Language Section -->
+    <div>
+      <h4 class="section-title">Languages</h4>
+      <div class="languages">
+	   <mdui-chip outlined >🇹🇳 Arabic </mdui-chip>
+	    <mdui-chip outlined >🇺🇸 English</mdui-chip>
+		 <mdui-chip outlined >🇫🇷 French</mdui-chip>
+		  <mdui-chip outlined >🇪🇸 Spanish</mdui-chip>
+       
+      </div>
+    </div>
 
-    <main class="main-content">
-        <section id="about">
-            <h2 class="section-title">About Me</h2>
-            <div class="card">
-                <p style="text-align: justify;">I'm <strong>Shivraj Anand</strong>, an undergraduate in Computer Science
-                    at B.P. Mandal College of Engineering, graduating in June 2025. I love data science, particularly
-                    the similarity between artificial intelligence and the human brain. I like data cleaning,
-                    statistical modeling, and developing models that convert raw data into insights. Presently, I'm
-                    developing proficiency in Data Science & Machine Learning, along with web development. My area of
-                    research is <strong>Natural Language Processing</strong> With a questionably inclined mind honed
-                    through poetry and reading, I envision myself as an eternal learner, ever searching at the
-                    crossroads of humans and machines.</p>
-                <div class="call-to-action">
-                    <div id="button">
-                        <a href="assets/documents/Shivraj_Anand_Resume.pdf" download class="download-btn"><i
-                                class="fas fa-download"></i> Resume</a>
-                    </div>
-                    <div id="button">
-                        <a href="#contact">Connect with me </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="skills">
-            <h2 class="section-title">Skills</h2>
-            <div class="card-grid">
-                <div class="card">
-                    <h3>Programming</h3>
-                    <ul class="skill-list">
-                        <li>Python</li>
-                        <li>C</li>
-                        <li>C++</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>ML/Data Analysis</h3>
-                    <ul class="skill-list">
-                        <li>NumPy</li>
-                        <li>Pandas</li>
-                        <li>PyTorch</li>
-                        <li>Scikit-Learn</li>
-                        <li>Excel</li>
-                        <li>Streamlit</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Web Dev</h3>
-                    <ul class="skill-list">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>JavaScript</li>
-                        <li>Bootstrap</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Database</h3>
-                    <ul class="skill-list">
-                        <li>SQL</li>
-                        <li>DBMS</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Tools</h3>
-                    <ul class="skill-list">
-                        <li>Git</li>
-                        <li>GitHub</li>
-                        <li>Power BI</li>
-                        <li>Canva</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Soft Skills</h3>
-                    <ul class="skill-list">
-                        <li>English</li>
-                        <li>Hindi</li>
-                        <li>Communication</li>
-                        <li>Content Writing</li>
-                    </ul>
-                </div>
-
-                <div class="card">
-                    <h3>Natural Language Processing</h3>
-                    <ul class="skill-list">
-                        <li>spaCy</li>
-                        <li>Transformers</li>
-                        <li>re</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="card" id="tech-logo-row">
-                <div class="tech-logo-row">
-                    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/files/python-logo-only.svg"
-                        alt="Python" title="Python">
-                    <img src="https://cdn.simpleicons.org/c/00599C" alt="C" title="C">
-                    <img src="https://cdn.simpleicons.org/cplusplus/00599C" alt="C++" title="C++">
-                    <img src="https://numpy.org/images/logo.svg" alt="NumPy" title="NumPy">
-                    <img src="https://pandas.pydata.org/static/img/pandas_mark.svg" alt="Pandas" title="Pandas">
-                    <img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="PyTorch" title="PyTorch">
-                    <img src="https://scikit-learn.org/stable/_static/scikit-learn-logo-small.png" alt="Scikit-Learn"
-                        title="Scikit-Learn">
-                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML" title="HTML">
-                    <img src="https://cdn.simpleicons.org/css3/1572B6" alt="CSS" title="CSS">
-                    <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript">
-                    <img src="https://cdn.simpleicons.org/bootstrap/7952B3" alt="Bootstrap" title="Bootstrap">
-                    <img src="https://cdn.simpleicons.org/mysql/4479A1" alt="MySQL" title="SQL">
-                    <img src="https://cdn.simpleicons.org/git/F05032" alt="Git" title="Git">
-                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" title="GitHub">
-                    <img src="https://res.cdn.office.net/files/fabric-cdn-prod_20230815.002/assets/brand-icons/product/svg/excel_32x1.svg"
-                        alt="Excel" title="Excel">
-                    <img src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Hero_BPI_icon1?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=96&hei=96&qlt=100&fmt=png-alpha&fit=constrain"
-                        alt="Power BI" title="Power BI">
-                    <img src="https://static.canva.com/web/images/8439b51bb7a19f6e65ce1064bc37c197.svg" alt="Canva"
-                        title="Canva">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/SpaCy_logo.svg" alt="spaCy"
-                        title="spaCy">
-                    <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Transformers"
-                        title="Transformers (Hugging Face)">
-                    <img src="https://docs.streamlit.io/logo.svg" alt="Streamlit" title="Streamlit">
-                </div>
-            </div>
-
-
-        </section>
-
-        <section id="projects">
-            <h2 class="section-title">Projects</h2>
-            <div class="card">
-                <p>Explore my work in AI, ML, data science, web apps, research. Visit the Projects and Blog page for
-                    details.</p>
-                <div class="scroll-container-wrapper">
-                    <div id="projects-container" class="scroll-container">
-                        <!-- Project tiles will be injected here -->
-                    </div>
-                </div>
-                <div id="button"><a href="pages/projects.html">View Projects →</a></div><br>
-                <div id="button"><a href="pages/blog.html">View Blogs →</a></div>
-            </div>
-
-        </section>
-
-        <section id="contact">
-            <h2 class="section-title">Work With Me</h2>
-            <p class="section-subtitle"><strong>Let’s connect—projects, research, or opportunities, I’m all
-                    ears.</strong></p>
-
-            <div class="contact-wrapper">
-                <!-- Left Card: Contact Info -->
-                <div class="card contact-info">
-                    <h3>Get In Touch</h3>
-                    <p><strong>Email:</strong> <a
-                            href="mailto:shivrajanand022002@gmail.com">shivrajanand022002@gmail.com</a></p>
-                    <p><strong>Phone:</strong> +91 8092776242</p>
-                    <p><strong>Location:</strong> India</p>
-
-                    <h4>Connect With Me</h4>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/shivrajanand" target="_blank"><i
-                                class="fab fa-linkedin"></i></a>
-                        <a href="https://www.github.com/shivrajanand" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://x.com/shivrajanand_ai" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/shivrajanandai/" target="_blank"><i
-                                class="fab fa-instagram"></i></a>
-                        <a href="https://www.kaggle.com/shivrajanandai" target="_blank"><i
-                                class="fab fa-kaggle"></i></a>
-                    </div>
-
-                    <div style="margin-top: 10px;">
-                        <p style="text-align: justify;">I'm interested in <strong>freelance assignments</strong>
-                            (<em>on-call</em>), <strong>compensated part-time remote internships</strong>, and
-                            <strong>collaborative research projects</strong>. Although I <em>prefer remote
-                                assignments</em>, I'd be willing to <u>relocate</u> for the proper <strong>full-time
-                                opportunity</strong> or <strong>significant project</strong>.</p>
-                    </div>
-                </div>
-
-                <!-- Right Card: Contact Form -->
-                <div class="card contact-form">
-                    <h3>Send Me a Message</h3>
-                    <form action="https://formspree.io/f/xzzeplak" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="your@email.com" required>
-                        </div>
-                        <input type="text" name="subject" placeholder="What do you wanna talk about?" required>
-                        <textarea name="message" placeholder="Message" rows="10" required></textarea>
-                        <button type="submit">Send Message →</button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <div style="position: fixed; bottom: 30px; right: 5px;">
-        <div id="button"
-          onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"
-          style="
-            width: 50px;
-            height: 50px;
-            background-color: #333;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-          ">
-          <i class="fas fa-arrow-up"></i>
+    <!-- Projects Section -->
+    <div>
+      <h4 class="section-title">Projects</h4>
+      <div class="projects">
+        <div class="project" onClick='window.open("https://github.com/sparkleddevs/sparkleseditor","_blank");'>
+          <h5>Sparkles Editor</h5>
+          <p>Advanced code editor</p>
+        </div>
+        <div class="project" onClick='window.open("https://syntaxspin.github.io","_blank");'>
+          <h5>Robok Engine (Contributor) - Closed Source</h5>
+          <p>Game development framework</p>
+        </div>
+        <div class="project" onClick='window.open("https://github.com/syntaxspin/ffmpegplayground","_blank");'>
+          <h5>FFmpeg Playground</h5>
+          <p>Media processing toolkit</p>
+        </div>
+        <div class="project" onClick='window.open("https://github.com/syntaxspin/sakura","_blank");'>
+          <h5>Sakura</h5>
+          <p>Jetpack Compose Learner</p>
         </div>
       </div>
-      
+    </div>
 
+    
+ 
+ 
+ 
 
-    <footer>
-
-        <p>
-            © 2025 Shivraj Anand | All rights reserved.
-        </p>
-    </footer>
-
-    <script src="assets/js/script.js"></script>
+    <!-- Copyright -->
+    <div style="margin-top:49px;" class="copyright">
+      &copy; 2025 SyntaxSpin. All rights reserved. Made by <a herf="https://github.com/nexavo999">Nexavo</a> and adapted by SyntaxSpin
+    </div>
+  </div>
+</div>
 
 </body>
-
     </html>
