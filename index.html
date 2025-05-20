@@ -271,7 +271,100 @@
       <h4 class="section-title">CLICK THE BUTTON S BELOW TO USE MY PROJECTS</h4>
       <div class="projects">
 
-	      <div></div>
+	}
+
+    .button-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h3 {
+      margin-top: -40px;
+      opacity: 0;
+      animation: fadeIn 3s forwards;
+    }
+
+    .button {
+      width: 140px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0px 15px;
+      background-color: red;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      font-weight: 900;
+      transition-duration: .2s;
+      background: linear-gradient(0deg, #000, #272727);
+      text-decoration: none;
+    }
+
+  
+    footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222; /* Darker gray footer background */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    
+  }
+    .button:before, .button:after {
+      content: '';
+      position: absolute;
+      left: -2px;
+      top: -2px;
+      border-radius: 10px;
+      background: linear-gradient(45deg, #48ff00, #15ff00, #000000,#000000, #ff0000);
+      background-size: 400%;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      z-index: -1;
+      animation: steam 10s linear infinite;
+    }
+
+    @keyframes steam {
+      0% {
+        background-position: 0 0;
+      }
+
+      50% {
+        background-position: 400% 0;
+      }
+
+      100% {
+        background-position: 0 0;
+      }
+    }
+
+    .button:after {
+      filter: blur(50px);
+    }
+
+    .button span {
+      z-index: 1;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <h3>HI AM PK DRILLER A YOUNG PASSIONATE-DEV CHECK MY PROJECTS HERE 👇</h3>
+    <div></div>
     <a href="https://github.com/Pkdriller/NEXUS-AI" class="button" target="_blank"> <span>NEXUS-AI</span> </a> <br>
     <a href="https://github.com/Pkdriller/NEXUS-XMD" class="button" target="_blank"> <span>NEXUS-XMD</span> </a> <br>
     <a href="https://pk-all-in-one-downloader.vercel.app" class="button" target="_blank"> <span>ALL-MEDIA-DOWNLOADER</span> </a> <br>
@@ -282,7 +375,24 @@
     <a href="https://apk-downloader-chi.vercel.app/" class="button" target="_blank"> <span>APK-DOWNLOADER</span> </a> <br>
     <a href="https://mr-pk-web.vercel.app/" class="button" target="_blank"> <span>WEB-1</span> </a> <br>
     <a href="https://pk-obfuscator.vercel.app/" class="button" target="_blank"> <span>ENYCRYPTOR</span> </a> <br>
-    
+    <p>REPORT ERROR</p>
+
+    <a href="https://wa.me/++254794146821?text=HEY_SIR_HAVE_SOMETHING_TO_DISCUSS_WITH_YOU" class="button" target="_blank"> <span>CONTACT-ME</span> </a> <br>
+      
+    <div id="music-player">
+      <audio controls autoplay loop>
+          <source src="https://files.catbox.moe/93z21l.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio>
+  </div>
+        
+
+    <footer>
+     HI AM  PKDRILLER THANKS FOR VISITING 2025 ALL RIGHT RESERVED 🇰🇪💙<span id="currentYear"></span>
+    </footer>
+  
+</body>
+      </html>
  <!-- Sliding text -->
     <div class="sliding-text">Hello, this is Pkdriller!</div>
 
